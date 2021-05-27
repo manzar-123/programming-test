@@ -1,0 +1,63 @@
+---
+title: "Chunks"
+author: "Manzar"
+date: "5/25/2021"
+output: html_document
+---
+
+
+```{python}
+
+
+# UK floor converter to US
+
+inp = input("Enter your UK Floor ")
+usf = int(inp) + 1
+print("US floor", usf)
+
+```
+```{python}
+# salary calculator
+
+## xh = input("Hours: ")
+## xr = input("Rate: ")
+## xp = xh * xr
+
+## print("Salary is", xp)
+
+
+
+## this will give a string error. You can solve it in multiple ways.
+## one is to just put int in the input command.
+## other is to convert these inputs to int separately.
+## third is to convert them in float. 1st and 3rd are given here.
+## comment out first one to run the second here.
+
+
+xh = input("Hours: ")
+xr = input("Rate: ")
+xp = float(xh) * float(xr)
+
+print("Salary is", xp)
+
+
+```
+```{python}
+
+q1 = input("Finsish this code by correcting the syntax \n\n <body><p> this is a paragraph. ____</body>\n")
+
+q2 = input("complete the code with correct syntax \n\n <img ___='manzar.png' alt=''>")
+
+
+
+if (q1=="</p>" and q2=="src"):
+     print("True")
+else:
+     print("False")
+
+
+```
+
+
+
+
