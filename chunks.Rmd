@@ -2,9 +2,12 @@
 title: "Chunks"
 author: "Manzar"
 date: "5/25/2021"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
+#Floor Calculator. 
 
 ```{python}
 
@@ -16,23 +19,23 @@ usf = int(inp) + 1
 print("US floor", usf)
 
 ```
+
+#Salary Calculator program:
+
 ```{python}
-# salary calculator
+xh = input("Hours: ")
+xr = input("Rate: ")
+xp = xh * xr
 
-## xh = input("Hours: ")
-## xr = input("Rate: ")
-## xp = xh * xr
+print("Salary is", xp)
+```
 
-## print("Salary is", xp)
+this will give a string error. You can solve it in multiple ways.
+one is to just put int in the input command.
+other is to convert these inputs to int separately.
+third is to convert them in float. 1st and 3rd are given here.
 
-
-
-## this will give a string error. You can solve it in multiple ways.
-## one is to just put int in the input command.
-## other is to convert these inputs to int separately.
-## third is to convert them in float. 1st and 3rd are given here.
-## comment out first one to run the second here.
-
+```{python}
 
 xh = input("Hours: ")
 xr = input("Rate: ")
@@ -42,8 +45,30 @@ print("Salary is", xp)
 
 
 ```
+
+#Make a true false generating argument with simple maths:
+
 ```{python}
 
+q1 = input("5+6= \n")
+
+q2 = input("11-2= \n")
+
+## make sure to convert it from str to int otherwise it will always generate 'False'
+
+q1 = int(q1); q2 = int(q2)
+
+if (q1==11 and q2==9):
+     print("True")
+else:
+     print("False")
+
+
+```
+
+#Make a true false generating argument with simple syntax fill in the blanks:
+
+```{python}
 q1 = input("Finsish this code by correcting the syntax \n\n <body><p> this is a paragraph. ____</body>\n")
 
 q2 = input("complete the code with correct syntax \n\n <img ___='manzar.png' alt=''>")
@@ -54,9 +79,50 @@ if (q1=="</p>" and q2=="src"):
      print("True")
 else:
      print("False")
+```
 
+#Define a program to be called later on.
+I will use the same exapmle from above for this chunk.
+
+```{python}
+
+def signal_gen():
+  q1 = input("Finsish this code by correcting the syntax \n\n <body><p> this is a paragraph.____</body>\n")
+  
+  q2 = input("complete the code with correct syntax \n\n <img ___='manzar.png' alt=''>")
+  
+  
+  
+  if (q1=="</p>" and q2=="src"):
+       print("True")
+  else:
+       print("False")
+
+## call your function
+
+signal_gen()
 
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
