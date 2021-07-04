@@ -1,0 +1,33 @@
+---
+title: "chunks2"
+author: "Manzar"
+date: "6/25/2021"
+output: html_document
+---
+
+# Extracting letters from words
+```{python}
+
+data = "From manzar.abbas@scholar.aku.edu Sat June 2021"
+
+atpos = data.find("@")
+print(atpos)
+sppos = data.find(" ", atpos)
+print(sppos)
+domain = data[atpos+1 : sppos]
+print(domain)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+

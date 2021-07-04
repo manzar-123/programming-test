@@ -3,8 +3,9 @@ title: "Chunks"
 author: "Manzar"
 date: "5/25/2021"
 output:
-  pdf_document: default
+  word_document: default
   html_document: default
+  pdf_document: default
 ---
 
 #Floor Calculator. 
@@ -82,7 +83,7 @@ else:
 ```
 
 #Define a program to be called later on.
-I will use the same exapmle from above for this chunk.
+I will use the same example from above for this chunk.
 
 ```{python}
 
@@ -104,16 +105,114 @@ signal_gen()
 
 ```
 
+## Make for loop
+
+```{python}
+
+for n in [1,2,3,4,5,6,7,8]:
+  print(n)
+
+print("Done")
+
+```
+
+## A bit advanced for loop
+
+```{python}
+n= ["manzar", 'joseph', 'aj', 'bp']
+for friends in n:
+  print("Happy birthday", friends)
+
+print("Done")
+```
 
 
 
+```{python}
+from quiz import questions
+from quiz import question_prompts
+
+def run_quiz(questions):
+     score = 0
+     while guess1 != answer1 and not(out_of_guesses1):
+      if guess_count1 < guess_limit1:
+          guess1 = question_prompt[0]
+          guess_count1 += 1
+      else:
+          out_of_guesses1 = True
+```
 
 
 
+```{python}
+import quiz
+
+def run_quiz():
+     score = 0
+     while guess1 != answer1 and not(out_of_guesses1):
+      if guess_count1 < guess_limit1:
+          guess1 = input("What color are apple? \n(a) Red/Green\n(b) Purple\n\n")
+          guess_count1 += 1
+      else:
+          out_of_guesses1 = True
+     
+
+
+run_quiz()
+```
 
 
 
+```{python}
+class Question:
+     def __init__(self, prompt, answer):
+          self.prompt = prompt
+          self.answer = answer
 
+question_prompts = [
+     "What color are apples?\n(a) Red/Green\n(b)Orange",
+     "What color are bananas?\n(a) Red/Green\n(b)Yellow",
+]
+
+questions = [
+     Question(question_prompts[0], "a"),
+     Question(question_prompts[1], "b"),
+]
+
+def run_quiz(questions):
+     score = 0
+     for question in questions:
+          answer = input(question.prompt)
+          if answer == question.answer:
+               score += 1
+     print("you got", score, "out of", len(questions))
+
+run_quiz(questions)
+```
+
+
+# find an occurance
+we will try to find 3 in some values
+
+
+```{python}
+
+found = False
+print("Before", found)
+for value in [4, 5,6,7,8, 9,10,3, 2,9,1,4,1,7,7,7,10,6]:
+  if value == 3:
+    found = True
+    # you can add break here to pause at 3. You can save some processing power
+    # break
+  print(found, value)
+print("After", found)
+  
+```
+
+# Exercise
+Write a program which repeatedly reads numbers until the user enters "done". once that is enter3e, print out the total, count, and average of the numbers. if the user enters anything other than a number, detect their mistake using #try and #except and print an error message and skip to the next number. 
+
+# see the file exercise1.py for codes.
 
 
 
